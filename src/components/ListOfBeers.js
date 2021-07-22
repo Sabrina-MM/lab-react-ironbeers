@@ -7,6 +7,7 @@ import '../css/ListOfBeers.css';
 function ListOfBeers() {
   const [allBeers, setAllBeers] = useState([]);
   const [searchBeer, setSearchBeer] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const showingInfoSearch = (searchBeer) => {
     fetch(`https://ih-beers-api2.herokuapp.com/beers/search?q=${searchBeer}`)
@@ -21,17 +22,16 @@ function ListOfBeers() {
 
   useEffect(() => {
     fetch('https://ih-beers-api2.herokuapp.com/beers').then((response) =>
-      response.json().then((data) => infoFromApi(data))
+      response.json().then((data) => setAllBeers(data))
     );
   }, []);
 
-  const infoFromApi = (data) => {
-    setAllBeers(data);
-  };
   const searchingBeer = (e) => {
     e.preventDefault();
-    setSearchBeer(e.target.value);
-    showingInfoSearch(searchBeer);
+    let toUpperCase = e.target.value.toUpperCase();
+    showingInfoSearch(toUpperCase);
+    setSearchBeer(toUpperCase);
+    setLoading(true);
   };
   return (
     <div className="List-Of-beers">
@@ -44,7 +44,7 @@ function ListOfBeers() {
         />
       </form>
       <div className="container">
-        {allBeers.length === 0 ? (
+        {loading === true && allBeers.length === 0 ? (
           <p>
             <i className="far fa-sad-tear"></i> There is no such beer with this
             name: <strong>"{searchBeer}"</strong>
