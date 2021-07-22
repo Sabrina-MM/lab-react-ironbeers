@@ -44,8 +44,11 @@ function ListOfBeers() {
         />
       </form>
       <div className="container">
-        {searchBeer < 0 ? (
-          <p>there is not any beer with that name: {searchBeer}</p>
+        {allBeers.length === 0 ? (
+          <p>
+            <i className="far fa-sad-tear"></i> There is no such beer with this
+            name: <strong>"{searchBeer}"</strong>
+          </p>
         ) : null}
         {allBeers.map((beer, index) => {
           return (
