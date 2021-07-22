@@ -1,0 +1,50 @@
+.New-beer .container {
+  height: 100%;
+  margin-bottom: 50px;
+}
+.New-beer h1 {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0px 50px 0px;
+  font-family: var(--titles-font-family);
+  font-size: 45px;
+}
+
+.New-beer form {
+  text-align: center;
+}
+
+.New-beer form input {
+  width: 80%;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 10px;
+  border-color: #3dc3fc62;
+  box-shadow: 1px 6px #3dc4fc7d;
+  font-size: 25px;
+}
+
+.New-beer button {
+  width: 80%;
+  background-color: var(--primary-color);
+  margin-top: 20px;
+  border-radius: 10px;
+  color: white;
+  padding: 10px;
+  border: var(--primary-color);
+}
+
+.New-beer button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.New-beer .description {
+  height: 200px;
+  box-sizing: border-box;
+}
+@media (max-width: 576px) {
+  .New-beer form input {
+    width: 100%;
+  }
+}

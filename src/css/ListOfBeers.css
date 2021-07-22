@@ -1,0 +1,47 @@
+.List-Of-beers h2 {
+  font-family: var(--titles-font-family);
+  color: var(--primary-color);
+  font-size: 40px;
+}
+.List-Of-beers p {
+  font-size: 20px;
+}
+.List-Of-beers form {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.List-Of-beers form input {
+  width: 50%;
+  margin-top: 10px;
+  border-radius: 10px;
+  padding: 5px;
+  border-color: #3dc3fc62;
+  box-shadow: 1px 6px #3dc4fc7d;
+  font-size: 25px;
+}
+.List-Of-beers img {
+  width: 80px;
+  display: block;
+}
+.List-Of-beers div .img-details {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.List-Of-beers div .beer-details {
+  margin-top: 50px;
+}
+
+.List-Of-beers .dividing-line {
+  border: 1px solid var(--borders-and-lines);
+}
+
+@media (max-width: 576px) {
+  .List-Of-beers h2 {
+    font-size: 35px;
+  }
+  .List-Of-beers p {
+    font-size: 15px;
+  }
+}
