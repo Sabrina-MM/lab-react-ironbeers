@@ -6,29 +6,6 @@
 <img src="https://user-images.githubusercontent.com/23629340/45887951-2ca0bb80-bdbd-11e8-91a4-08b66d88a7c7.gif" />
 </div>
 
-## Setup
-
-- Fork this repo
-- Clone this repo
-
-```shell
-$ cd lab-react-ironbeers
-$ npm install
-$ npm start
-```
-
-## Submission
-
-- Upon completion, run the following commands:
-
-  ```
-  git add .
-  git commit -m "done"
-  git push origin master
-  ```
-
-- Create Pull Request so your TAs can check up your work.
-
 ## Introduction
 
 We will be building a React app so the API (server) needs to be built somewhere for us, right? You are completely right, it's deployed on _heroku_ and the root fo the API is:
