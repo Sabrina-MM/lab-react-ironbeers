@@ -156,17 +156,8 @@ Finally, on the `/new-beer` route (remember, this is you react route, you're dis
 - **attenuation_level** - must be type _number_ **!!!**
 - **contributed_by** - must be type _text_
 
-Why we pointed out the type? Well, since we already console log response from the API, we could notice that all the fields are strings but _attenuation_level_, which is number. Using our knowledge from module II, we can make conclusion that in the _beer model_ all the properties are type _String_ except _attenuation_level_, which is type _Number_.
-When you have built the form, you should do a `POST` request to `https://ih-beers-api2.herokuapp.com/beers/new`, passing all the data on the `body` object. If everything went ok, you would receive a **200** response from the server.
+![](./src/assets/form.PNG)
 
-Notice that the fields on the `body` should have those specific **names** so the API can create a new beer.
-
-_What could go wrong?_: You inputted string instead of number in the _attenuation_level_ field and the server sent you **500** error.
-Since we didn't cover how to upload images yet, don't worry about it now - the API will assign a random image to the new beer. :beer:
-
-<div style="display: flex; justify-content: center">
-  <img src="https://user-images.githubusercontent.com/23629340/40707877-3c9dad42-63f2-11e8-8c95-4881bbde64a2.png" height="600px" />
-</div>
 
 ### Iteration 7 | Bonus | Filter the beers
 
