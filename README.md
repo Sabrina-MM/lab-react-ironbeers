@@ -9,11 +9,7 @@ Since beer is one of the most consumed drinks between Ironhackers 🍻 , our mis
 </div>
 
 ## Setup
-<<<<<<< HEAD
-sabrina
-=======
 
->>>>>>> 625bd5bbf39096699b9de360c76127568008d6a1
 - Fork this repo
 - Clone this repo
 
@@ -163,9 +159,12 @@ Finally, on the `/new-beer` route (remember, this is you react route, you're dis
 ![](./src/assets/form.PNG)
 
 
+
 ### Iteration 7 | Bonus | Filter the beers
 
 Yes! One endpoint left! On the `/beers` route, add an `input` where users can search for beers. Every time a new letter is typed, you should call to `https://ih-beers-api2.herokuapp.com/beers/search?q={query}` passing the value of the input in the `q` param.
+
+![](./src/assets/filter.PNG)
 
 **We are done!** :trophy:
 
