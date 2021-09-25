@@ -162,6 +162,8 @@ Finally, on the `/new-beer` route (remember, this is you react route, you're dis
 
 Yes! One endpoint left! On the `/beers` route, add an `input` where users can search for beers. Every time a new letter is typed, you should call to `https://ih-beers-api2.herokuapp.com/beers/search?q={query}` passing the value of the input in the `q` param.
 
+![](./src/assets/filter.PNG)
+
 **We are done!** :trophy:
 
 Awesome! Grab a beer (if you're not underage :wink: )! Now you are a **React Warrior**, keep training to become the Ninja!
