@@ -9,7 +9,7 @@ Since beer is one of the most consumed drinks between Ironhackers 🍻 , our mis
 </div>
 
 ## Setup
-s
+
 - Fork this repo
 - Clone this repo
 
