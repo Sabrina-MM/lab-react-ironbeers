@@ -9,11 +9,7 @@ Since beer is one of the most consumed drinks between Ironhackers 🍻 , our mis
 </div>
 
 ## Setup
-<<<<<<< HEAD
-sabrina
-=======
 
->>>>>>> 625bd5bbf39096699b9de360c76127568008d6a1
 - Fork this repo
 - Clone this repo
 
@@ -161,7 +157,6 @@ Finally, on the `/new-beer` route (remember, this is you react route, you're dis
 - **contributed_by** - must be type _text_
 
 ![](./src/assets/form.PNG)
-
 
 ### Iteration 7 | Bonus | Filter the beers
 
