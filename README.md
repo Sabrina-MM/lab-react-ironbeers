@@ -1,9 +1,6 @@
-
 ![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
 
 # React IronBeers
-
-
 
 <div style="display: flex; justify-content: center">
 <img src="https://user-images.githubusercontent.com/23629340/45887951-2ca0bb80-bdbd-11e8-91a4-08b66d88a7c7.gif" />
@@ -47,8 +44,6 @@ The available endpoints are the following:
 | POST   | /new                | { message: "New beer successfully saved to database!"} | Create a new beer (the fields are specified in the instructions)                                                                        |
 | GET    | /search?q=`{query}` | [beers]                                                | Get beers from the DB whose name contains the search term. For example `/search?q=lager` searches for all beers with lager in the name. |
 
-
-
 The **IronBeers** project will include the following features:
 
 - A **Home** page with three different options:
@@ -60,7 +55,6 @@ The **IronBeers** project will include the following features:
 - A **Random Beer** page to display a Random Beer
 - A **New Beer** page to show a form where a user can create new beers
 
-
 ### Iteration 1 | Home Page
 
 **Home Page**.Include three links to separate pages:
@@ -69,15 +63,11 @@ The **IronBeers** project will include the following features:
 - `/random-beer`
 - `/new-beer`
 
-
-
-<div style="display: flex; justify-content: center">
-  <img src="https://user-images.githubusercontent.com/23629340/40706572-933439b8-63ee-11e8-8d65-538fb59f79ab.png" height="600px" />
-</div>
+![](./src/assets/menu.PNG)
 
 ### Iteration 2 | Header
 
- **header** with a `link` to the root of the `app`.
+**header** with a `link` to the root of the `app`.
 
 <div style="display: flex; justify-content: center">
   <img src="https://user-images.githubusercontent.com/23629340/40707029-cb2fce12-63ef-11e8-939c-f673ff3b965d.png" height="100px" />
@@ -87,14 +77,12 @@ The **IronBeers** project will include the following features:
 
 On the `/beers` route, we should display all the beers from the database. So, in this case, you need to "hit" the API's route `https://ih-beers-api2.herokuapp.com/beers` and the API will return an **array of beers**.
 
-
 You should display the following from each of the beers:
 
 - `image`
 - `name`
 - `tagline`
 - `contributed_by`
-
 
 <div style="display: flex; justify-content: center">
   <img src="https://user-images.githubusercontent.com/23629340/40706960-96223ade-63ef-11e8-9375-b7b6d091e716.png" height="600px" />
@@ -113,8 +101,6 @@ When a user click on one of the beers, you should display a detailed view of it,
 - `attenuation_level`
 - `description`
 - `contributed_by`
-
-
 
 <div style="display: flex; justify-content: center">
   <img src="https://user-images.githubusercontent.com/23629340/40707269-84bedd78-63f0-11e8-86c3-b14efb9323a7.png" height="600px" />
@@ -157,4 +143,4 @@ Yes! One endpoint left! On the `/beers` route, add an `input` where users can se
 
 ![](./src/assets/filter.PNG)
 
-**We are done!** 
+**We are done!**
