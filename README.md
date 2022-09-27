@@ -1,35 +1,10 @@
 ![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
 
-# LAB | React IronBeers
-
-Since beer is one of the most consumed drinks between Ironhackers 🍻 , our mission here is to create an app to showcase some of the best-handcrafted beers, but not just that - to save some as well so the rest of Ironhack community is informed 😌. Our end goal is creating something like this:
+# React IronBeers
 
 <div style="display: flex; justify-content: center">
 <img src="https://user-images.githubusercontent.com/23629340/45887951-2ca0bb80-bdbd-11e8-91a4-08b66d88a7c7.gif" />
 </div>
-
-## Setup
-
-- Fork this repo
-- Clone this repo
-
-```shell
-$ cd lab-react-ironbeers
-$ npm install
-$ npm start
-```
-
-## Submission
-
-- Upon completion, run the following commands:
-
-  ```
-  git add .
-  git commit -m "done"
-  git push origin master
-  ```
-
-- Create Pull Request so your TAs can check up your work.
 
 ## Introduction
 
@@ -46,8 +21,6 @@ The available endpoints are the following:
 | POST   | /new                | { message: "New beer successfully saved to database!"} | Create a new beer (the fields are specified in the instructions)                                                                        |
 | GET    | /search?q=`{query}` | [beers]                                                | Get beers from the DB whose name contains the search term. For example `/search?q=lager` searches for all beers with lager in the name. |
 
-On each iteration, we will explain which endpoint you should use!
-
 The **IronBeers** project will include the following features:
 
 - A **Home** page with three different options:
@@ -59,31 +32,19 @@ The **IronBeers** project will include the following features:
 - A **Random Beer** page to display a Random Beer
 - A **New Beer** page to show a form where a user can create new beers
 
-## Instructions
-
-:exclamation: At the very beginning we will offer you to shoot for the stars: as a **bonus** focus on **mobile first** design! As we said this is bonus, so it's up to you. :+1:
-
-<!-- ### Iteration 1: Create the App
-
-Well, at this point, this comes natural: we will use `create-react-app` to build a new app. Feel free to name it as you wish, but if you need some inspiration, we called it **Reactive BeersJS**. -->
-
 ### Iteration 1 | Home Page
 
-Create a **Home Page**. This view should include three links to separate pages:
+**Home Page**.Include three links to separate pages:
 
 - `/beers`
 - `/random-beer`
 - `/new-beer`
 
-Feel free to design it however you wish, but in case you want to do it the way we did it, you can find the following images in `src/assets` folder:
-
-<div style="display: flex; justify-content: center">
-  <img src="https://user-images.githubusercontent.com/23629340/40706572-933439b8-63ee-11e8-8d65-538fb59f79ab.png" height="600px" />
-</div>
+![](./src/assets/menu.PNG)
 
 ### Iteration 2 | Header
 
-On every view (except for the `home`), we should add a **header** with a `link` to the root of the `app`.
+**header** with a `link` to the root of the `app`.
 
 <div style="display: flex; justify-content: center">
   <img src="https://user-images.githubusercontent.com/23629340/40707029-cb2fce12-63ef-11e8-939c-f673ff3b965d.png" height="100px" />
@@ -93,15 +54,12 @@ On every view (except for the `home`), we should add a **header** with a `link` 
 
 On the `/beers` route, we should display all the beers from the database. So, in this case, you need to "hit" the API's route `https://ih-beers-api2.herokuapp.com/beers` and the API will return an **array of beers**.
 
-_Hint_: The array of beers is array of objects. We strongly advise you to **console log the response** from the API so you can see the structure of it.
-
 You should display the following from each of the beers:
 
 - `image`
 - `name`
 - `tagline`
 - `contributed_by`
-- **Also, add the link to check the details of each beer. The link should navigate to `/beers/:beerId`.**
 
 <div style="display: flex; justify-content: center">
   <img src="https://user-images.githubusercontent.com/23629340/40706960-96223ade-63ef-11e8-9375-b7b6d091e716.png" height="600px" />
@@ -120,8 +78,6 @@ When a user click on one of the beers, you should display a detailed view of it,
 - `attenuation_level`
 - `description`
 - `contributed_by`
-
-Again, we **strongly recommend to console log the response from the API**.
 
 <div style="display: flex; justify-content: center">
   <img src="https://user-images.githubusercontent.com/23629340/40707269-84bedd78-63f0-11e8-86c3-b14efb9323a7.png" height="600px" />
@@ -156,24 +112,12 @@ Finally, on the `/new-beer` route (remember, this is you react route, you're dis
 - **attenuation_level** - must be type _number_ **!!!**
 - **contributed_by** - must be type _text_
 
-Why we pointed out the type? Well, since we already console log response from the API, we could notice that all the fields are strings but _attenuation_level_, which is number. Using our knowledge from module II, we can make conclusion that in the _beer model_ all the properties are type _String_ except _attenuation_level_, which is type _Number_.
-When you have built the form, you should do a `POST` request to `https://ih-beers-api2.herokuapp.com/beers/new`, passing all the data on the `body` object. If everything went ok, you would receive a **200** response from the server.
+![](./src/assets/form.PNG)
 
-Notice that the fields on the `body` should have those specific **names** so the API can create a new beer.
-
-_What could go wrong?_: You inputted string instead of number in the _attenuation_level_ field and the server sent you **500** error.
-Since we didn't cover how to upload images yet, don't worry about it now - the API will assign a random image to the new beer. :beer:
-
-<div style="display: flex; justify-content: center">
-  <img src="https://user-images.githubusercontent.com/23629340/40707877-3c9dad42-63f2-11e8-8c95-4881bbde64a2.png" height="600px" />
-</div>
-
-### Iteration 7 | Bonus | Filter the beers
+### Iteration 7 | Filter the beers
 
 Yes! One endpoint left! On the `/beers` route, add an `input` where users can search for beers. Every time a new letter is typed, you should call to `https://ih-beers-api2.herokuapp.com/beers/search?q={query}` passing the value of the input in the `q` param.
 
-**We are done!** :trophy:
+![](./src/assets/filter.PNG)
 
-Awesome! Grab a beer (if you're not underage :wink: )! Now you are a **React Warrior**, keep training to become the Ninja!
-
-Happy coding! :heart:
+**We are done!**

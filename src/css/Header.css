@@ -1,0 +1,10 @@
+.Header {
+  padding: 10px;
+  text-align: center;
+  background-color: var(--primary-color);
+}
+
+.Header a {
+  color: white;
+  font-size: 50px;
+}

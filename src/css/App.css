@@ -1,0 +1,18 @@
+:root {
+  --titles-font-family: 'Zen Loop', cursive;
+  --primary-color: #3dc4fc;
+  --primary-font-family: 'Poppins', sans-serif;
+  --borders-and-lines: #9a9a9a;
+}
+
+.App {
+  height: 100%;
+  margin: 15px;
+  font-family: var(--primary-font-family);
+}
+
+@media (max-width: 576px) {
+  .App {
+    margin: 0 auto;
+  }
+}

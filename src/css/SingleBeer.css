@@ -1,0 +1,36 @@
+.Single-beer h2 {
+  font-family: var(--titles-font-family);
+  color: var(--primary-color);
+  font-size: 40px;
+}
+.Single-beer p {
+  font-size: 20px;
+}
+
+.Single-beer img {
+  width: 80px;
+  display: block;
+}
+.Single-beer div .img-details {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.Single-beer div .beer-details {
+  margin-top: 50px;
+}
+
+.Rando button {
+  top: 200px;
+  position: fixed;
+}
+
+@media (max-width: 576px) {
+  .Single-beer h2 {
+    font-size: 35px;
+  }
+  .Single-beer p {
+    font-size: 15px;
+  }
+}
